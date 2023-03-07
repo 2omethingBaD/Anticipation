@@ -13,20 +13,16 @@ public class playerController : MonoBehaviour
     public bool _isAllowedRIGHT;
 
 
-    void Awake()
-    {
-        _isAllowedUP = false;
-        _isAllowedDOWN = true;
-        _isAllowedLEFT = true;
-        _isAllowedRIGHT = true;
-    }
-
 
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>(); //gets rigid body so you dont have to type whole thing
         _rb.gravityScale = 0; //stops player from falling until set to at least 1
+        _isAllowedUP = true;
+        _isAllowedDOWN = true;
+        _isAllowedLEFT = true;
+        _isAllowedRIGHT = true;
     }
 
 
